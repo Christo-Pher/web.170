@@ -37,6 +37,10 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box;}
 
+a {
+    text-decoration: none;
+}
+
 html {
     background-color: #DCD7D0;
 }
@@ -337,11 +341,6 @@ blockquote {
     margin: 20px 0;
     clear: both;
     padding-bottom: 10px;
-}
-
-.carousel-indicators {
-    padding-bottom: 0;
-    margin-bottom: 0;
 }
 
 .carousel-container {
