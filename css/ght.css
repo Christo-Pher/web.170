@@ -77,7 +77,7 @@ aside {
 
 .logo {
     max-width: 200px;
-    padding-bottom: 7px;
+    padding-bottom: 5px;
     margin-left: 20px;
 }
 
@@ -105,7 +105,7 @@ h2 {
     max-width: 980px;
     clear: both;
     border-bottom: 3px solid #523404;
-    padding-bottom: 0;
+    padding-bottom: 5px;
     margin-bottom: 0;
 }
 
@@ -118,7 +118,7 @@ br.tag-break {
 }
 
 .social-media-container {
-    width: 45px;
+    width: 43px;
     float: right;
     display: inline;
 }
