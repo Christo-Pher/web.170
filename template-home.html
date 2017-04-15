@@ -7,10 +7,11 @@
 <meta name="description" content="Good Human Travel is changing the way people experience culture.  We do this by sharing sustainable travel techniques, helping tavelers support local economies, and through volunteer work at local nature conservancies and/or human rights organizations." />
 <meta name="keywords" content="Ecotourism, Sustainable Travel, Volunteer Work, Voluntourism, Wildlife Protection, Nature Conservancy, International Culture, Human's Rights." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/south-street/jquery-ui.css">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/ght.css" />
 <link rel="stylesheet" href="css/form.css" />
+<script src="js/modernizr.js"></script>
 </head>
 
 <body>
@@ -57,56 +58,30 @@
         </div>
     </div>
 <!-- end header -->    
-<!-- start cta-carousel --> 
+<!-- start flexslider --> 
 <div class="carousel-container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- start indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-        <!-- end indicators -->
-
-    <!-- start wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-
-      <div class="item active">
-        <a href="itineraries-kenya.php"><img src="images/kenya.jpg" alt="Kenya" title="Kenya" width="980" height="500"></a>
-      </div>
-
-      <div class="item">
-          <a href="itineraries-canada.php"><img src="images/canada.jpg" alt="Canada" title="Canada" width="980" height="500"></a>
-      </div>
-        
-      <div class="item">
-          <a href="itineraries-nepal.php"><img src="images/nepal.jpg" alt="Nepal" title="Nepal" width="980" height="500"></a>
-      </div>
-        
-      <div class="item">
-          <a href="itineraries-costa-rica.php"><img src="images/costa-rica.jpg" alt="Costa Rica" title="Costa Rica" width="980" height="500"></a>
-      </div>
-  
-    </div>
-    <!-- end wrapper for slides -->
-
-    <!-- start left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    <!-- end left and right controls -->
-        
-    </div>
+    
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+            <a href="itineraries-kenya.php"><img src="images/kenya.jpg" alt="Kenya" title="Kenya" /></a>
+            </li>
+            <li>
+            <a href="itineraries-canada.php"><img src="images/canada.jpg" alt="Canada" title="Canada" /></a>
+            </li>
+            <li>
+            <a href="itineraries-nepal.php"><img src="images/nepal.jpg" alt="Nepal" title="Nepal" /></a>
+            </li>
+            <li>
+            <a href="itineraries-costa-rica.php"><img src="images/costa-rica.jpg" alt="Costa Rica" title="Costa Rica" /></a>
+            </li>
+          </ul>
+        </div>
+    
     <a href="sign-up.php"><img src="images/carousel-cta.svg" class="carousel-cta"/></a>
 </div>
     
-<!-- end cta-carousel -->
+<!-- end flexslider -->
 
 <!-- start main article -->
 <article>
@@ -221,8 +196,21 @@
 <!-- end footer --> 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
 <script src="js/ght.js"></script>
+  <script type="text/javascript">
+   
+    //load flex-slider  
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        slideshowSpeed: 5500,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
