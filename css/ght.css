@@ -73,6 +73,7 @@ aside {
 
 .article-wrap {
     padding: 10px 20px;
+    margin-top: 20px;
 }
 
 .logo {
@@ -105,7 +106,7 @@ h2 {
     max-width: 980px;
     clear: both;
     border-bottom: 3px solid #523404;
-    padding-bottom: 5px;
+    padding-bottom: 0;
     margin-bottom: 0;
 }
 
@@ -283,6 +284,7 @@ p {
 
 .sidebar-header {
     border-bottom: 3px solid #fff;
+    margin-top: 20px;
 }
 
 .product-review-header {
@@ -360,6 +362,7 @@ blockquote {
 
 h6 {
     margin-bottom: 5px;
+    font-size: 12px;
 }
 
 .feedback {
@@ -387,16 +390,19 @@ h6 {
 .footer-ul-1 {
     width: 250px;
     margin-left: 6%;
+    padding: 10px;
 }
 
 .footer-ul-2 {
     width: 250px;
     margin-left: 4%;
+    padding: 10px;
 }
 
 .footer-ul-3 {
     width: 180px;
     margin-left: 4%;
+    padding: 10px;
 }
 
 footer {
