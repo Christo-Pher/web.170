@@ -1,0 +1,694 @@
+/* 
+Theme Name: Good Human Travel
+Theme URI: https://github.com/Christo-Pher/web.170
+Author: Christopher Cornwell
+Author URI: http://christophercornwell.net/
+Description: This is the theme I've created for Good Human Travel, a local eco-tourism startup.
+Version: 1.0
+*/
+
+* { margin: 0; padding: 0; }
+
+@font-face {
+    font-family: 'markpro-book';
+    src: url('fonts/MarkPro-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'markpro-bold';
+    src: url('fonts/MarkPro-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'markpro-black';
+    src: url('fonts/MarkPro-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'markpro-bolditalic';
+    src: url('fonts/MarkPro-BoldItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'markpro-blackitalic';
+    src: url('fonts/MarkPro-BlackItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+* { margin: 0; padding: 0; box-sizing: border-box;}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    background-color: #DCD7D0;
+}
+
+body {
+    background-color:#FFFFFF;
+    color: #523404;
+    max-width: 1020px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    }
+
+article {
+    width: 660px;
+    margin: 0 auto;
+    float: left;
+    font-family: "markpro-bold", sans-serif;
+}
+
+aside {
+    width: 320px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    float: right;
+    background-color: #523404;
+    color: #fff;
+    font-family: "markpro-book", sans-serif;
+}
+
+.article-wrap {
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 200px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+}
+
+h1.tagline {
+    font-family: "markpro-blackitalic", sans-serif;
+    color: #3AA128;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 49px;
+    max-width: 500px; 
+    float: left;
+}
+
+h2 {
+    font-family: "markpro-black", sans-serif;
+    color: #523404;
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 4px;
+}
+
+.header-container {
+    max-width: 980px;
+    clear: both;
+    border-bottom: 3px solid #523404;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+br.tag-break {
+    display: none;
+}
+
+.header {
+    float:right;
+}
+
+.social-media-container {
+    width: 43px;
+    float: right;
+    display: inline;
+}
+
+img.social-media-icon {
+    margin: 2px 0;
+    display: inline;
+}
+
+a.link {
+    text-decoration: underline;
+}
+
+a {
+    font-family: "markpro-black", sans-serif;
+    color: #523404;
+}
+
+.nav {
+    float:right;
+    line-height: 24px;
+}
+
+.nav br {
+    display: none;
+}
+
+.sub-menu br {
+    display: block;
+}
+
+div.nav li, .dropbtn {
+    display:inline-block;
+    font-size: 22px;
+    margin: 0 0 0 10px;
+}
+
+li.menu-item-has-children {
+    position: relative;
+    display: inline-block;
+}
+
+div.nav ul.menu-main {
+    display: inline;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 200px;
+    margin-left: 10px;
+    padding: 0 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+ul.sub-menu a {
+    font-family: "markpro-bold", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+
+a:hover {
+    color:#3AA128; 
+    text-decoration: none;
+    }
+
+#sandwich {
+    display: none;
+}
+
+.carousel-cta {
+    max-width: 280px;
+    float: left;
+    margin-top: -150px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.trip-header {
+    width: 100%;
+    border-bottom: 3px solid #523404; 
+    border-top: 3px solid #523404; 
+    margin: 20px 0 10px -20px;
+    padding: 5px 5px 5px 20px;
+    float: right;
+    background-color: #DCD7D0; 
+}
+
+.book-it-header {
+    float: right;
+    width: 160px;
+}
+
+.book-it {
+    float: right;
+    width: 200px;
+    margin: 0 5% 20px 0;
+}
+
+.main-header-img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 3px solid #523404;
+}
+
+h3 {
+    font-family: "markpro-black", sans-serif;   
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 4px;
+}
+
+h4 {
+    font-family: "markpro-black", sans-serif;   
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+
+h5 {
+    font-family: "markpro-black", sans-serif;   
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+    }
+
+.destinations-ul {
+    margin-left: 10%;
+    font-family: "markpro-bold", sans-serif;
+}
+
+.travel-blog-blurb {
+    width: 45%;
+    float: left;
+}
+
+.destinations-ul-container {
+    margin: 0;
+    padding: 0 10px;
+    width: 50%;
+    border: 2px solid #523404;
+    border-radius: 5px;
+    float: right;
+    background-color: #DCD7D0;
+}
+
+.sidebar-header {
+    border-bottom: 3px solid #fff;
+    margin-top: 20px;
+}
+
+.product-review-header {
+    font-size: 22px;
+}
+
+.product-review-container {
+    margin: 20px 0 0 0;
+}
+
+img.product-review-thumbnail {
+    width: 100%;
+}
+
+img.product-review-thumbnail:hover {
+    opacity: 0.7;
+}
+
+.sidebar-link {
+    font-family: "markpro-bold", sans-serif;
+    color: #fff;
+}
+
+blockquote {
+    font-family: "markpro-bolditalic";
+    float: right;
+    width: 200px;
+    margin: 10px 20px;
+    padding: 10px;
+    border: 0;
+    border-top: 3px solid #523404;
+    border-bottom: 3px solid #523404;
+}
+
+.blog-thumbnail, .content-img-right {
+    width: 280px;
+    float: right;
+    margin: 5px 0 5px 20px;
+}
+
+.content-img-left {
+    width: 280px;
+    float: left;
+    margin: 5px 20px 5px 0;
+}
+
+.blog-thumbnail:hover {
+    opacity: 0.7;
+}
+
+.blogpost-container img:hover {
+    opacity: 0.7;
+}
+
+.blogpost-container {
+    margin: 20px 0;
+    clear: both;
+    padding-bottom: 10px;
+}
+
+.carousel-container {
+    background-color: #fff;
+    border-bottom: 3px solid #523404;
+}
+
+.social-media-container-footer {
+    width: 65px;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.social-media-icon:hover {
+    opacity: 0.7;
+}
+
+h6 {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.feedback {
+    font-family: "markpro-bold", sans-serif;   
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.foot-button {
+    float: right;
+    border-top: 3px solid #523404;
+    border-bottom: 3px solid #523404;
+    padding: 0 5px;
+    margin: 0 0 20px 0;
+    background-color: #DCD7D0;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-ul-1 {
+    width: 250px;
+    margin-left: 6%;
+    padding: 10px;
+}
+
+.footer-ul-2 {
+    width: 250px;
+    margin-left: 4%;
+    padding: 10px;
+}
+
+.footer-ul-3 {
+    width: 180px;
+    margin-left: 4%;
+    padding: 10px;
+}
+
+footer {
+    width: 100%;
+    clear: both;
+    background-color: #B9AFA1;
+    border-top: 3px solid #523404;
+    font-family: "markpro-black", sans-serif;   
+    font-size: 12px;
+    line-height: 18px;
+    border-radius: 0 0 10px 10px;
+}
+
+@media screen and (max-width: 1020px){
+    .nav {
+        display: none;
+        width: 210px;
+        float: right;
+        clear: both;
+        position: absolute;
+        z-index: 20;
+        background-color: #fff;
+        text-align: right;
+        padding-right: 10px;
+        margin-left: -155px;
+    }
+    
+    .sub-menu {
+        display: none;
+        position: inherit;
+        background-color: rgba(255, 255, 255);
+        width: 200px;
+        margin-left: 0;
+        margin-left: -40px;
+        padding: 0 5px;
+        box-shadow: none;
+    }
+    
+    .menu-item-has-children:hover .sub-menu {
+    display: none;
+}
+    
+    body {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    .logo {
+        width: 20.40%;
+        min-width: 140px;
+        padding-bottom: 0.71%;
+        margin-left: 2.04%;
+    }
+    
+    h1.tagline {
+        font-size: 18px;
+        padding: 20px 0 0 0;
+        margin: 0; 
+        font-size
+    }
+    
+    br.tag-break {
+    display: block;
+}
+    
+    #sandwich {
+        display: block;
+        width: 45px;
+        margin: 10px 20px 10px 0;
+    }
+    
+    .nav-container {
+        float: right;
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+    
+    .social-media-container {
+        display: none;
+    }
+    
+    .header {
+        width: 60%;
+    }
+    
+    .carousel-cta {
+        width: 28.57%;
+        float: left;
+        margin-top: -15%;
+        margin-left: 4.08%;
+        position: relative;
+    }
+    
+    article {
+        width: 67.34%;
+    }
+    
+    .blog-thumbnail, .content-img-right, .content-img-left {
+    width: 42.42%;
+    }
+    
+    aside {
+        width: 32.65%;
+    }
+    
+    .footer-ul-1 {
+        width: 25.51%;
+        margin-left: 6%;
+    }
+
+    .footer-ul-2 {
+        width: 25.51%;
+        margin-left: 4%;
+    }
+
+    .footer-ul-3 {
+        width: 18.36%;
+        margin-left: 4%;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    body {
+        width: 100%;
+    }
+    article {
+        width: 100%;
+        padding: 0;
+    }
+    
+    aside {
+        width: 100%;
+        padding: 10px 20px;
+        margin: 0 auto;
+    }
+    
+    .nav {
+        width: 270px;
+        margin-left: -215px;
+    }
+    
+    #sandwich {
+        margin: 10px 10px 10px 0;
+    }
+    
+    .nav br {
+        display: block;
+    }
+    
+    /*h1.tagline {
+        font-size: 11px;
+    }*/
+    
+    .sub-menu {
+        width: 260px;
+    }
+    
+    div.nav li, .dropbtn {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    ul.sub-menu a {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    .pr-img {
+        float: left;
+        width: 45%;
+        margin: 0 10px 10px 0;
+    }
+    
+    .product-review-container {
+        border-bottom: 3px solid #fff;
+    }
+    
+    .social-media-container-footer {
+        margin-left: 20%;
+    }
+    
+    .footer-ul-1 {
+        width: 30%;
+        margin-left: 27%;
+    }
+
+    .footer-ul-2 {
+        width: 35%;
+        margin-left: 15%;
+    }
+
+    .footer-ul-3 {
+        width: 35%;
+        margin-left: 10%;
+    }
+    
+}
+
+
+@media screen and (max-width: 480px){
+    
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .logo {
+        margin: 5px;
+    }
+    
+    .header {
+        width: 40%;
+    }
+    
+    h1.tagline {
+        display: none;
+    }
+    
+    article {
+        width: 100%;
+        float: none;
+    }
+    
+    .article-wrap {
+        padding: 0 10px;
+    }
+    
+    .blog-thumbnail, .content-img-right, .content-img-left {
+        width: 100%;
+    }
+    
+    .travel-blog-blurb{
+        width: 100%;
+    }
+    
+    .destinations-ul-container {
+        width: 90%;
+        margin-bottom: 15px;
+        margin-right: 5%;
+    }
+    
+    aside {
+        width: 100%;
+        margin: auto;
+        float: none;
+        clear: both;
+    }
+    
+    .pr-img {
+        width: 100%;
+    }
+    
+    .social-media-container-footer {
+        margin-left: 5%;
+    }
+    
+    footer {
+        border-radius: 0;
+    }
+    
+    .footer-ul-1 {
+        width: 54%;
+        margin-left: 15%;
+    }
+
+    .footer-ul-2 {
+        width: 30%;
+        margin-left: 5%;
+    }
+
+    .footer-ul-3 {
+        width: 54%;
+        margin-left: 10%;
+    }
+    
+}
+
