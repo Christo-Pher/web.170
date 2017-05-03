@@ -1,5 +1,11 @@
+$(document).ready( function () {
+    $( "li.menu-item-has-children a" ).addClass( "dropbtn" );
+});
+
 //on window open load these functions
 $(window).load(function() {
+    
+    
     
     //on click of id sandwich
     $("#sandwich").click(function() {
@@ -13,7 +19,7 @@ $(window).load(function() {
     $(".dropbtn").click(function() {
 
         //toggle the display of class dropdown-content only following clicked item
-        $(this).next(".dropdown-content").slideToggle();
+        $(this).next(".sub-menu").slideToggle();
 
     }); 
     
