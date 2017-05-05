@@ -181,8 +181,8 @@ div.nav ul.menu-main {
     display: none;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
-    width: 200px;
-    margin-left: 10px;
+    width: 210px;
+    margin-left: -10px;
     padding: 0 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
@@ -439,6 +439,14 @@ footer {
         margin-left: -155px;
     }
     
+    div.nav li, .dropbtn {
+    margin: 0;
+}
+    
+    .nav br {
+        display: block;
+    }
+    
     .sub-menu {
         display: none;
         position: inherit;
@@ -559,9 +567,7 @@ footer {
         margin: 10px 10px 10px 0;
     }
     
-    .nav br {
-        display: block;
-    }
+    
     
     /*h1.tagline {
         font-size: 11px;
