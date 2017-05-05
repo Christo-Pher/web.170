@@ -3,10 +3,14 @@
 //on window open load these functions
 $(window).load(function() {
     
+    /*
     function b() {
     var linebreak = document.createElement("br");
     document.getElementsByTagName("li").appendChild(linebreak);
     }
+    */
+    
+     $("li").after("<br />");
     
     //on click of id sandwich
     $("#sandwich").click(function() {
