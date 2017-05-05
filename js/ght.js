@@ -1,11 +1,12 @@
-$(document).ready( function () {
-    $( "li.menu-item-has-children a" ).addClass( "dropbtn" );
-});
+
 
 //on window open load these functions
 $(window).load(function() {
     
-    
+    function b() {
+    var linebreak = document.createElement("br");
+    document.getElementsByTagName("li").appendChild(linebreak);
+    }
     
     //on click of id sandwich
     $("#sandwich").click(function() {
@@ -16,10 +17,12 @@ $(window).load(function() {
     });
     
     //on click of class dropbtn
-    $(".dropbtn").click(function() {
+    $("li.menu-item-has-children a").click(function(e) {
 
         //toggle the display of class dropdown-content only following clicked item
         $(this).next(".sub-menu").slideToggle();
+        
+        e.preventDefault();
 
     }); 
     
