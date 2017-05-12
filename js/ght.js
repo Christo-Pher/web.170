@@ -3,14 +3,7 @@
 //on window open load these functions
 $(window).load(function() {
     
-    /*
-    function b() {
-    var linebreak = document.createElement("br");
-    document.getElementsByTagName("li").appendChild(linebreak);
-    }
-    */
-    
-     $("li").after("<br />");
+     $("div.nav li").after("<br />");
     
     //on click of id sandwich
     $("#sandwich").click(function() {
@@ -20,13 +13,14 @@ $(window).load(function() {
 
     });
     
-    //on click of class dropbtn
+    //on click of li with class menu-item-has-children
     $("li.menu-item-has-children a").click(function(e) {
 
-        //toggle the display of class dropdown-content only following clicked item
+        //toggle the display of class sub-menu only following clicked item
         $(this).next(".sub-menu").slideToggle();
         
-        e.preventDefault();
+        //find a way to keep this from targetting children a tags...
+        //e.preventDefault();
 
     }); 
     
