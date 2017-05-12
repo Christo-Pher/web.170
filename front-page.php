@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- start flexslider --> 
+<!-- start flexslider -->
 <div class="carousel-container">
     
         <div class="flexslider">
@@ -28,14 +28,15 @@
 <!-- start main article -->
 
 
-<?php query_posts(array('posts_per_page' => '3')); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>        
+    <?php query_posts(array('posts_per_page' => '3')); ?>   
 	<article id="article-<?php the_ID ?>" class="article">
     <div class="article-wrap">
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(''); ?></a></h2>
     <small>Posted on <?php the_time('F jS, Y') ?> in <?php the_category(', ') ?></small>
     <?php the_content(); ?>
     <?php endwhile; endif ; ?>
+    <small>front-page.php</small>
     </div>
     </article>
 

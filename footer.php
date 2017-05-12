@@ -8,8 +8,8 @@
     <div class="social-media-container-footer">
         <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/Facebook.svg" class="social-media-icon"></a>
         <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/Twitter.svg" class="social-media-icon"></a>
-    </div>
-    
+    </div>    
+        
     <div class="footer-ul-1">
     <h6>Annual Itineraries</h6>
     <ul>

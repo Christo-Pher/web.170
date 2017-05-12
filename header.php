@@ -8,9 +8,9 @@
 <meta name="keywords" content="Ecotourism, Sustainable Travel, Volunteer Work, Voluntourism, Wildlife Protection, Nature Conservancy, International Culture, Human's Rights." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/south-street/jquery-ui.css">
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/flexslider.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/form.css" />
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/flexslider.css" type="text/css" media="screen" />
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script>
 
 <?php wp_head(); ?>    
@@ -21,7 +21,7 @@
 
 <!-- start header -->
     <div class="header-container">
-        <a href="home.php"><img src="<?php bloginfo('template_directory'); ?>/images/GHT.svg" class="logo" alt="Good Human Travel" /></a>
+        <a href="<?php echo get_settings('home'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/GHT.svg" class="logo" alt="Good Human Travel" /></a>
         <div class="header">
             <div class="social-media-container">
                 <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/Facebook.svg" class="social-media-icon"></a>
