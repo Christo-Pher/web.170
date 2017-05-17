@@ -236,7 +236,7 @@ a:hover {
     margin: 0 5% 20px 0;
 }
 
-.main-header-img {
+.size-blogpost-header-img {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -308,8 +308,12 @@ img.product-review-thumbnail {
     width: 100%;
 }
 
-img.product-review-thumbnail:hover {
+a img:hover {
     opacity: 0.7;
+}
+
+.logo:hover {
+    opacity: 1;
 }
 
 .sidebar-link {
@@ -334,18 +338,13 @@ blockquote {
     margin: 5px 0 5px 20px;
 }
 
-.content-img-left {
-    width: 280px;
+.size-my-thumb {
     float: left;
     margin: 5px 20px 5px 0;
 }
 
-.blog-thumbnail:hover {
-    opacity: 0.7;
-}
-
-.blogpost-container img:hover {
-    opacity: 0.7;
+.thumbnail-excerpt-container {
+    margin-top: 10px;
 }
 
 .blogpost-container {
@@ -363,10 +362,6 @@ blockquote {
     width: 65px;
     padding: 10px;
     margin: 0 20px;
-}
-
-.social-media-icon:hover {
-    opacity: 0.7;
 }
 
 h6 {
@@ -518,7 +513,7 @@ footer {
         width: 67.34%;
     }
     
-    .blog-thumbnail, .content-img-right, .content-img-left {
+    .blog-thumbnail, .content-img-right, .size-my-thumb {
     width: 42.42%;
     }
     
@@ -648,7 +643,7 @@ footer {
         padding: 0 10px;
     }
     
-    .blog-thumbnail, .content-img-right, .content-img-left {
+    .blog-thumbnail, .content-img-right, .size-my-thumb {
         width: 100%;
     }
     
