@@ -50,11 +50,7 @@
     <small>Posted on <?php the_time('F jS, Y') ?> in <?php the_category(', ') ?> by <?php the_author(); ?></small><br>
     <div class="thumbnail-excerpt-container">
     <a href="<?php the_permalink(); ?>"><?php if (class_exists('MultiPostThumbnails')) :
-    MultiPostThumbnails::the_post_thumbnail(
-        get_post_type(),
-        'secondary-image'
-    );
-endif; ?></a>
+    MultiPostThumbnails::the_post_thumbnail( get_post_type(), 'secondary-image' ); endif; ?></a>
     <p><?php echo get_the_excerpt(); ?><a href="<?php the_permalink(); ?>">....READ MORE</a></p>
     </div>
     <?php endwhile; endif ; ?>
