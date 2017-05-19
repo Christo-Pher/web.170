@@ -27,19 +27,41 @@
 
 <!-- start main article -->
 
-
-    <?php query_posts(array('posts_per_page' => '3')); ?>   
-	<article id="article-<?php the_ID ?>" class="article">
+<article id="article-<?php the_ID ?>" class="article">
     <div class="article-wrap">
+
+<!-- start about us query -->
+
+    <h3>Welcome</h3>
+    <?php rewind_posts(); ?>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <?php the_content(''); ?>
+    <?php endwhile; endif; ?>
+
+<!-- finish about us query -->
+
+
+<!-- start blog posts -->
+
+    <?php rewind_posts(); ?>
+    <?php query_posts(array('posts_per_page' => '4')); ?>   
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <h3><a href="<?php the_permalink(); ?>"><?php the_title(''); ?></a></h3>
     <small>Posted on <?php the_time('F jS, Y') ?> in <?php the_category(', ') ?> by <?php the_author(); ?></small>
-    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('my-thumb'); ?></a>
+    <a href="<?php the_permalink(); ?>"><?php if (class_exists('MultiPostThumbnails')) :
+    MultiPostThumbnails::the_post_thumbnail(
+        get_post_type(),
+        'secondary-image'
+    );
+endif; ?></a>
     <p><?php echo get_the_excerpt(); ?><a href="<?php the_permalink(); ?>">....READ MORE</a></p>
     <?php endwhile; endif ; ?>
     <small>front-page.php</small>
+
+<!-- finish blog posts -->
+
     </div>
-    </article>
+</article>
 
 <!-- end main article -->
 
