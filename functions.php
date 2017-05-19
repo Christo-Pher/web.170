@@ -15,24 +15,17 @@ register_nav_menus(array('main-menu' => __('Main Navigation')));
 //add featured image and post thumbnail support
 add_theme_support('post-thumbnails');
 
-add_image_size('my-thumb', 260, 173, true);
+set_post_thumbnail_size(260, 173, true);
 add_image_size('blogpost-header-img', 660, 300);
 
-//this function to add a second featured image isn't working.  outdated plugin?
-add_filter( 'kdmfi_featured_images', function( $featured_images ) {
-    $args = array(
-        'id' => 'featured-image-2',
-        'desc' => 'Your description here.',
-        'label_name' => 'Featured Image 2',
-        'label_set' => 'Set featured image 2',
-        'label_remove' => 'Remove featured image 2',
-        'label_use' => 'Set featured image 2',
-        'post_type' => array( 'page' ),
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(
+        array(
+            'label' => 'Secondary Image',
+            'id' => 'secondary-image',
+            'post_type' => 'post'
+        )
     );
-
-    $featured_images[] = $args;
-
-    return $featured_images;
-});
+}
 
 ?>

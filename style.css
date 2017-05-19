@@ -171,6 +171,14 @@ li.menu-item-has-children {
     display: inline-block;
 }
 
+li.cat-item a {
+    color: #fff;
+}
+
+li.cat-item a:hover {
+    color: #3AA128;
+}
+
 div.nav ul.menu-main {
     display: inline;
     padding-bottom: 0;
@@ -338,13 +346,13 @@ blockquote {
     margin: 5px 0 5px 20px;
 }
 
-.size-my-thumb {
+.size-post-thumbnail {
     float: left;
     margin: 5px 20px 5px 0;
 }
 
 .thumbnail-excerpt-container {
-    margin-top: 10px;
+    margin: 10px 0 30px 0;
 }
 
 .blogpost-container {
@@ -513,7 +521,7 @@ footer {
         width: 67.34%;
     }
     
-    .blog-thumbnail, .content-img-right, .size-my-thumb {
+    .blog-thumbnail, .content-img-right, .size-post-thumbnail {
     width: 42.42%;
     }
     
@@ -643,7 +651,7 @@ footer {
         padding: 0 10px;
     }
     
-    .blog-thumbnail, .content-img-right, .size-my-thumb {
+    .blog-thumbnail, .content-img-right, .size-post-thumbnail {
         width: 100%;
     }
     
