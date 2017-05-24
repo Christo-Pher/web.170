@@ -44,7 +44,7 @@
 <!-- start blog posts -->
 
     <?php rewind_posts(); ?>
-    <?php query_posts(array('posts_per_page' => '4')); ?>   
+    <?php query_posts(array('category__in' => array(1,2,3,4,5,6,7) , 'posts_per_page' => '4')); ?>   
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <h4><a href="<?php the_permalink(); ?>"><?php the_title(''); ?></a></h4>
     <small>Posted on <?php the_time('F jS, Y') ?> in <?php the_category(', ') ?> by <?php the_author(); ?></small><br>

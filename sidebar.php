@@ -41,33 +41,29 @@
     ?>
     </ul>
     
+    <?php if(get_post_meta($post->ID, 'quote', true)) : ?>
+    <blockquote><?php echo get_post_meta($post->ID, 'quote', true); ?></blockquote>
+    <?php endif; ?>
+    
+    <?php dynamic_sidebar(1); ?>
+    
     <h3 class="sidebar-header">Product Reviews:</h3>
     
-    <!-- start product review feed --> 
-    <div class="product-review-container">
-        <div class="pr-img">
-        <a href="product-review-osprey-kestrel.php"><img src="<?php bloginfo('template_directory'); ?>/images/osprey-kestrel.jpg" alt="Osprey Kestrel Backpack" class="product-review-thumbnail"></a>
-        </div>
-        <h4 class="product-review-header"><a href="product-review-osprey-kestrel.php" class="sidebar-link">Osprey Kestrel 38 Bag</a></h4>
-        <p>Tattooed fam activated charcoal, brooklyn cronut ramps four loko celiac beard tousled. Gentrify tacos chambray brooklyn jean shorts godard. Stumptown green juice typewriter, tbh squid tumeric brooklyn put a bird on it brooklyn tots cliche glossier....<a href="product-review-osprey-kestrel.php" class="sidebar-link">READ MORE</a></p> 
-    </div>
+    <!-- start product review feed -->
     
+    <?php rewind_posts(); ?>
+    <?php query_posts(array('category__in' => 8 , 'posts_per_page' => '3')); ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="product-review-container">
-        <div class="pr-img">
-        <a href="product-review-steripen.php"><img src="<?php bloginfo('template_directory'); ?>/images/steripen.jpg" alt="Steripen Water Purifier" class="product-review-thumbnail"></a>
-        </div>
-        <h4 class="product-review-header"><a href="product-review-steripen.php" class="sidebar-link">Steripen Water Purifier</a></h4>
-        <p>tote bag pinterest crucifix art party direct trade keytar migas. Kale chips cold-pressed cronut YOLO leggings DIY occupy. Plaid unicorn street art skateboard yr, disrupt squid gentrify crucifix leggings.  Wolf marfa post-ironic pok pok gobbldigook foop.....<a href="product-review-steripen.php" class="sidebar-link">READ MORE</a></p>
+    <div class="pr-img">
+    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('sidebar-img'); ?></a>
     </div>
+    <h4 class="product-review-header"><a href="<?php the_permalink(); ?>" class="sidebar-link"><?php the_title(''); ?></a></h4>
+    <p><?php echo get_the_excerpt(); ?><a href="<?php the_permalink(); ?>" class="sidebar-link">....READ MORE</a></p>
+    </div>
+    <?php endwhile; endif ; ?>
     
-    <div class="product-review-container">
-        <div class="pr-img">
-        <a href="product-review-creative-edge.php"><img src="<?php bloginfo('template_directory'); ?>/images/creative-edge-solar-charger.jpg" alt="Creative Edge Solar Charger" class="product-review-thumbnail"></a>
-        </div>
-        <h4 class="product-review-header"><a href="product-review-creative-edge.php" class="sidebar-link">Creative Edge Solar Charger</a></h4>
-        <p>Direct trade keytar migas. Kale chips cold-pressed leggings DIY occupy. Plaid readymade unicorn street art skateboard yr, disrupt squid gentrify crucifix leggings. XOXO brooklyn cronut ramps four loko celiac beard tousled. Gentrify tacos chambray brooklyn jean shorts zots godard....<a href="product-review-creative-edge.php" class="sidebar-link">READ MORE</a></p>
-    </div>
-    <!-- end product review feed --> 
+    <!-- end product review feed -->
     
 </aside>
 <!-- end sidebar --> 
