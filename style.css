@@ -320,7 +320,7 @@ a img:hover {
     opacity: 0.7;
 }
 
-.logo:hover {
+.logo:hover, .flex-active-slide a img, .carousel-cta:hover {
     opacity: 1;
 }
 
@@ -331,13 +331,17 @@ a img:hover {
 
 blockquote {
     font-family: "markpro-bolditalic";
-    float: right;
-    width: 200px;
+    width: 85%;
     margin: 10px 20px;
     padding: 10px;
     border: 0;
-    border-top: 3px solid #523404;
-    border-bottom: 3px solid #523404;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.widgettitle {
+    color: #fff !important;
+    font-size: 24px !important;
 }
 
 .blog-thumbnail, .content-img-right {
@@ -346,7 +350,7 @@ blockquote {
     margin: 5px 0 5px 20px;
 }
 
-.size-post-thumbnail {
+.size-post-thumbnail, .content-img-left {
     float: left;
     margin: 5px 20px 5px 0;
 }
@@ -521,7 +525,7 @@ footer {
         width: 67.34%;
     }
     
-    .blog-thumbnail, .content-img-right, .size-post-thumbnail {
+    .blog-thumbnail, .content-img-right, .size-post-thumbnail, .content-img-left {
     width: 42.42%;
     }
     
@@ -651,7 +655,7 @@ footer {
         padding: 0 10px;
     }
     
-    .blog-thumbnail, .content-img-right, .size-post-thumbnail {
+    .blog-thumbnail, .content-img-right, .size-post-thumbnail, .content-img-left {
         width: 100%;
     }
     
