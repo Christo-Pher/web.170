@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="http://christophercornwell.net/projects/good-human-travel/images/ght-favicon.png">
-<title>blah blah blah</title>
-<meta name="description" content="Good Human Travel is changing the way people experience culture.  We do this by sharing sustainable travel techniques, helping tavelers support local economies, and through volunteer work at local nature conservancies and/or human rights organizations." />
+<title><?php get_the_title_tag(); ?></title>
+<meta name="description" content="<?php echo get_the_excerpt() ?>" />
 <meta name="keywords" content="Ecotourism, Sustainable Travel, Volunteer Work, Voluntourism, Wildlife Protection, Nature Conservancy, International Culture, Human's Rights." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/south-street/jquery-ui.css">
